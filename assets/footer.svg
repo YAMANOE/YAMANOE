@@ -26,23 +26,44 @@
   <text x="1152" y="52" text-anchor="end" font-family="SFMono-Regular, Menlo, Consolas, monospace"
         font-size="14" letter-spacing="2.4" fill="#7FA9D8">AMMAN, JORDAN · AR / EN</text>
 
-  <!-- the route arrives: hero opens the graph, the footer closes it -->
+  <!-- the route arrives. one 6s timeline, no begin offsets, so the
+       packet lands exactly when the node fires: travel 0-80%, impact 80-90%. -->
   <line x1="48" y1="86" x2="1152" y2="86" stroke="url(#fedge)" stroke-width="2.2"/>
-  <path d="M48,86 L1152,86" fill="none" stroke="#5AA6FF" stroke-width="2.4" stroke-linecap="round"
+
+  <path d="M48,86 L1152,86" fill="none" stroke="#5AA6FF" stroke-width="2.6" stroke-linecap="round"
         stroke-dasharray="150 1150" stroke-dashoffset="1300" filter="url(#fgl)">
-    <animate attributeName="stroke-dashoffset" from="1300" to="-150" dur="6s" repeatCount="indefinite"/>
+    <animate attributeName="stroke-dashoffset" values="1300;-150;-150" keyTimes="0;0.8;1"
+             dur="6s" calcMode="linear" repeatCount="indefinite"/>
   </path>
-  <circle r="3.6" fill="#BFDCFF" filter="url(#fgl)">
-    <animateMotion dur="6s" repeatCount="indefinite" path="M48,86 L1152,86"/>
-    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.05;.92;1" dur="6s" repeatCount="indefinite"/>
-  </circle>
 
   <g fill="#0A1B2E" stroke="#3B8AD9" stroke-width="1.8">
     <circle cx="330" cy="86" r="5"/><circle cx="678" cy="86" r="5"/><circle cx="960" cy="86" r="5"/>
   </g>
+
+  <circle r="4.2" fill="#DCEBFF" filter="url(#fgl)">
+    <animateMotion dur="6s" calcMode="spline" keyPoints="0;1;1" keyTimes="0;0.8;1"
+                   keySplines="0.15 0.55 0.25 1;0 0 1 1"
+                   path="M48,86 L1152,86" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;1;1;0;0" keyTimes="0;0.02;0.79;0.85;1"
+             dur="6s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- terminal node -->
   <circle cx="1152" cy="86" r="6.5" fill="#1F6FEB" stroke="#BFDCFF" stroke-width="2" filter="url(#fgl)"/>
-  <circle cx="1152" cy="86" r="6.5" fill="none" stroke="#8FC4FF" stroke-width="1.5">
-    <animate attributeName="r" values="6.5;17;6.5" dur="6s" begin="5.1s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values=".9;0;0" keyTimes="0;.18;1" dur="6s" begin="5.1s" repeatCount="indefinite"/>
+  <circle cx="1152" cy="86" r="8.5" fill="#FFFFFF" opacity="0" filter="url(#fgl)">
+    <animate attributeName="opacity" values="0;0;1;0.5;0;0" keyTimes="0;0.78;0.82;0.87;0.94;1"
+             dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1152" cy="86" r="6.5" fill="none" stroke="#BFDCFF" stroke-width="2.6" opacity="0">
+    <animate attributeName="r" values="6.5;6.5;36;36" keyTimes="0;0.79;0.95;1"
+             dur="6s" calcMode="spline" keySplines="0 0 1 1;0.1 0.7 0.3 1;0 0 1 1" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0;1;0;0" keyTimes="0;0.79;0.83;0.95;1"
+             dur="6s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1152" cy="86" r="6.5" fill="none" stroke="#5AA6FF" stroke-width="1.8" opacity="0">
+    <animate attributeName="r" values="6.5;6.5;26;26" keyTimes="0;0.84;0.99;1"
+             dur="6s" calcMode="spline" keySplines="0 0 1 1;0.1 0.7 0.3 1;0 0 1 1" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0;0;0.75;0;0" keyTimes="0;0.84;0.88;0.99;1"
+             dur="6s" repeatCount="indefinite"/>
   </circle>
 </svg>
