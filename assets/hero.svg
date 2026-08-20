@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280" role="img" aria-label="Yaman Obiedat — AI Engineer, Amman, Jordan">
+  <title>Yaman Obiedat — AI Engineer, Amman, Jordan</title>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#071320"/>
+      <stop offset="55%" stop-color="#0A1C30"/>
+      <stop offset="100%" stop-color="#08243F"/>
+    </linearGradient>
+
+    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1F6FEB" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#1F6FEB" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0A66C2"/>
+      <stop offset="100%" stop-color="#4D9AFF"/>
+    </linearGradient>
+
+    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#1F6FEB" stop-opacity="0.30"/>
+      <stop offset="70%" stop-color="#1F6FEB" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#1F6FEB" stop-opacity="0"/>
+    </radialGradient>
+
+    <pattern id="dots" width="34" height="34" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="#1F6FEB" fill-opacity="0.13"/>
+    </pattern>
+
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="4" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="softglow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="280" rx="14" fill="url(#bg)"/>
+  <rect width="1200" height="280" rx="14" fill="url(#dots)"/>
+  <ellipse cx="880" cy="140" rx="330" ry="170" fill="url(#halo)"/>
+
+  <!-- ── routing network ───────────────────────────────────────── -->
+  <g stroke="#1B4B7A" stroke-width="1.6" stroke-linecap="round" fill="none" opacity="0.85">
+    <line x1="600" y1="140" x2="688" y2="72"/>
+    <line x1="600" y1="140" x2="688" y2="208"/>
+    <line x1="688" y1="72"  x2="782" y2="140"/>
+    <line x1="688" y1="208" x2="782" y2="140"/>
+    <line x1="782" y1="140" x2="876" y2="66"/>
+    <line x1="782" y1="140" x2="876" y2="214"/>
+    <line x1="876" y1="66"  x2="966" y2="140"/>
+    <line x1="876" y1="214" x2="966" y2="140"/>
+    <line x1="966" y1="140" x2="1058" y2="80"/>
+    <line x1="966" y1="140" x2="1058" y2="200"/>
+    <line x1="1058" y1="80"  x2="1146" y2="140"/>
+    <line x1="1058" y1="200" x2="1146" y2="140"/>
+  </g>
+
+  <!-- traced routes: a solved path sweeping the graph -->
+  <g fill="none" stroke-linecap="round" filter="url(#glow)">
+    <path d="M600,140 L688,72 L782,140 L876,66 L966,140 L1058,80 L1146,140"
+          stroke="#4D9AFF" stroke-width="2.6" stroke-dasharray="120 900" stroke-dashoffset="1020">
+      <animate attributeName="stroke-dashoffset" from="1020" to="-120" dur="4.6s" repeatCount="indefinite"/>
+    </path>
+    <path d="M600,140 L688,208 L782,140 L876,214 L966,140 L1058,200 L1146,140"
+          stroke="#1F6FEB" stroke-width="2.6" stroke-dasharray="120 900" stroke-dashoffset="1020">
+      <animate attributeName="stroke-dashoffset" from="1020" to="-120" dur="4.6s" begin="1.5s" repeatCount="indefinite"/>
+    </path>
+    <path d="M600,140 L688,72 L782,140 L876,214 L966,140 L1058,80 L1146,140"
+          stroke="#7FB2FF" stroke-width="2" stroke-dasharray="80 940" stroke-dashoffset="1020" opacity="0.75">
+      <animate attributeName="stroke-dashoffset" from="1020" to="-80" dur="6s" begin="3s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- packets travelling the network -->
+  <g filter="url(#softglow)">
+    <circle r="3.6" fill="#9BC7FF">
+      <animateMotion dur="4.6s" repeatCount="indefinite"
+        path="M600,140 L688,72 L782,140 L876,66 L966,140 L1058,80 L1146,140"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.9;1" dur="4.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle r="3.2" fill="#4D9AFF">
+      <animateMotion dur="4.6s" begin="1.5s" repeatCount="indefinite"
+        path="M600,140 L688,208 L782,140 L876,214 L966,140 L1058,200 L1146,140"/>
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.08;0.9;1" dur="4.6s" begin="1.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- vertices -->
+  <g>
+    <g fill="#0A1C30" stroke="#2F7FD6" stroke-width="1.8">
+      <circle cx="688" cy="72"   r="5.5"/>
+      <circle cx="688" cy="208"  r="5.5"/>
+      <circle cx="782" cy="140"  r="6.5"/>
+      <circle cx="876" cy="66"   r="5.5"/>
+      <circle cx="876" cy="214"  r="5.5"/>
+      <circle cx="966" cy="140"  r="6.5"/>
+      <circle cx="1058" cy="80"  r="5.5"/>
+      <circle cx="1058" cy="200" r="5.5"/>
+    </g>
+
+    <!-- source -->
+    <circle cx="600" cy="140" r="7.5" fill="#0A66C2" stroke="#7FB2FF" stroke-width="2"/>
+    <circle cx="600" cy="140" r="7.5" fill="none" stroke="#4D9AFF" stroke-width="1.6" opacity="0.8">
+      <animate attributeName="r" values="7.5;20;7.5" dur="3.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0;0.8" dur="3.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- resolved terminal -->
+    <circle cx="1146" cy="140" r="8" fill="#1F6FEB" stroke="#9BC7FF" stroke-width="2" filter="url(#softglow)"/>
+    <circle cx="1146" cy="140" r="8" fill="none" stroke="#9BC7FF" stroke-width="1.6">
+      <animate attributeName="r" values="8;22;8" dur="3.4s" begin="1.7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0;0.9" dur="3.4s" begin="1.7s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ── identity ──────────────────────────────────────────────── -->
+  <rect x="70" y="66" width="46" height="3" rx="1.5" fill="url(#accent)"/>
+
+  <text x="70" y="126" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="52" font-weight="700" fill="#F2F7FF" letter-spacing="0.5">Yaman Obiedat</text>
+
+  <text x="70" y="164" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif"
+        font-size="22" font-weight="500" fill="#8FB6E8" letter-spacing="0.3">AI Engineer · Amman, Jordan</text>
+
+  <rect x="70" y="187" width="380" height="1" fill="url(#rule)"/>
+
+  <text x="70" y="216" font-family="SFMono-Regular, Menlo, Consolas, Liberation Mono, monospace"
+        font-size="14" fill="#5E90CC" letter-spacing="2.1">MULTI-AGENT SYSTEMS · POSTGIS · ARABIC NLP</text>
+</svg>
