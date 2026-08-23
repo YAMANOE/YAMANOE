@@ -37,6 +37,21 @@ Whether that exception widens is the actual choice in front of you.
 
 These match the standard the profile already set. Recommended.
 
+> ## The token constraint — read this before picking anything
+>
+> **Every card that aggregates user-level data needs a personal access token.** This is a
+> GitHub platform rule, not a quirk of any one project: the built-in `${{ secrets.GITHUB_TOKEN }}`
+> is scoped to *this repository* and cannot read across a user's repos, languages,
+> activity or profile. `metrics` says so in its setup docs; `github-profile-summary-cards`
+> says so in its README ("Every way of running this project ... needs a GitHub personal
+> access token"). Assume the same for §3.
+>
+> The exception is contribution-**calendar** data, which `GITHUB_TOKEN` *can* read — which
+> is exactly why `snk` and `github-profile-3d-contrib` work here today with no PAT.
+>
+> So: self-hosted **and** no PAT means contribution-graph toys only. Any language, stats
+> or repo-aggregate card requires creating a scopeless PAT once.
+
 ### 1. lowlighter/metrics — ★17,093
 [`lowlighter/metrics`](https://github.com/lowlighter/metrics) · 30+ plugins, 300+ options
 
@@ -109,7 +124,7 @@ jobs:
       - uses: actions/checkout@v5
       - uses: vn7n24fzkq/github-profile-summary-cards@release
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.SUMMARY_GITHUB_TOKEN }}   # a PAT, NOT the built-in token
         with:
           USERNAME: ${{ github.repository_owner }}
           UTC_OFFSET: 3
@@ -325,8 +340,8 @@ Rejected under this decision: everything in Part 2, including `activity-graph`, 
 the runner-up before the rule was set.
 
 Still available under the rule, if the profile ever wants more:
-`vn7n24fzkq/github-profile-summary-cards` (Part 1 §2) — no personal token needed, runs on
-`GITHUB_TOKEN` alone.
+`vn7n24fzkq/github-profile-summary-cards` (Part 1 §2) — but see the token note below; it
+needs a PAT too.
 
 ---
 
