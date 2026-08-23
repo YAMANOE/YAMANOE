@@ -82,14 +82,32 @@
 </tr>
 </table>
 
-## ▍Activity
+## ▍Open source
 
-<p><sub>Contribution rendering — supporting activity, not a measure of the systems above.</sub></p>
+<p><sub>Public repositories, linked to the code. The systems above are not open — these are the ones you can read.</sub></p>
 
-<p align="center">
-  <img alt="Contribution graph rendered as an animated 3D landscape, night view" src="./profile-3d-contrib/profile-night-view.svg" width="49%" />
-  <img alt="Contribution graph rendered as animated 3D commit blocks, night view" src="./profile-3d-contrib/profile-night-green.svg" width="49%" />
-</p>
+<table>
+<tr>
+<td width="33%" valign="top"><b><a href="https://github.com/YAMANOE/rag-tech">⚖️ RegTech Platform</a></b><br/><sub><b>المنصة الذكية للتشريعات الأردنية</b></sub></td>
+<td width="33%" valign="top"><b><a href="https://github.com/YAMANOE/recom_sys">🎬 NextGen Recommender</a></b><br/><sub><b>SEMANTIC RETRIEVAL · FULL STACK</b></sub></td>
+<td width="33%" valign="top"><b><a href="https://github.com/YAMANOE/nlp_pro1">🧪 Toxic Text Classification</a></b><br/><sub><b>LSTM vs DistilBERT + LoRA</b></sub></td>
+</tr>
+<tr>
+<td valign="top">Legislative intelligence over Jordanian law.</td>
+<td valign="top">A recommender that explains its own answers.</td>
+<td valign="top">Two architectures on one task, measured.</td>
+</tr>
+<tr>
+<td valign="top"><sub>Every output carries a provenance state — <b>Verified</b>, <b>Inferred</b>, <b>Generated</b> or <b>Unavailable</b>. Version diffs return an honest empty state instead of a guess, and the copilot is deliberately a secondary layer, never the source of truth.</sub></td>
+<td valign="top"><sub>Hybrid retrieval over catalog embeddings, metadata overlap and feedback memory, driven by seeds, avoid-lists and filters. Every result ships with the reason it was chosen, not just a score.</sub></td>
+<td valign="top"><sub>A bidirectional LSTM reaches <b>88%</b> accuracy and <b>0.89</b> weighted F1 on multi-class toxicity, with a LoRA-tuned DistilBERT measured against it. Per-class scores are published and the weakest class is named rather than hidden.</sub></td>
+</tr>
+<tr>
+<td valign="top"><sub><code>Next.js 14</code> <code>FastAPI</code> <code>PostgreSQL</code> <code>NebulaGraph</code></sub></td>
+<td valign="top"><sub><code>Next.js</code> <code>FastAPI</code> <code>Embeddings</code></sub></td>
+<td valign="top"><sub><code>Keras</code> <code>DistilBERT</code> <code>LoRA</code></sub></td>
+</tr>
+</table>
 
 <p align="center">
   <picture>
