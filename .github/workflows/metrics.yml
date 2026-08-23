@@ -15,27 +15,33 @@ jobs:
     runs-on: ubuntu-latest
     name: generate-languages-metrics
     steps:
-      # Fail in 2s with an actionable message instead of 40s into a docker pull.
-      # Prints presence only — never the value.
-      - name: Verify METRICS_TOKEN reaches this workflow
+      # A missing token is a "not configured yet" state, not a failure. Skip the
+      # render and finish green so the daily schedule stays quiet; the job starts
+      # rendering by itself on the next run after the secret appears.
+      # Reports presence and length only — never the value.
+      - name: Check for METRICS_TOKEN
+        id: preflight
         env:
           TOKEN: ${{ secrets.METRICS_TOKEN }}
         run: |
           if [ -z "$TOKEN" ]; then
-            echo "::error::METRICS_TOKEN is empty or not visible to this workflow."
-            echo "It must be a REPOSITORY secret under the ACTIONS tab:"
+            echo "present=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::METRICS_TOKEN is not set - skipping the render."
+            echo "To enable it, add a REPOSITORY secret under the ACTIONS tab:"
             echo "  Settings > Secrets and variables > Actions > Repository secrets"
+            echo "Named exactly METRICS_TOKEN, holding a classic PAT with no scopes."
             echo "Not the Dependabot tab, not Codespaces, not an Environment secret."
-            echo "Name must be exactly METRICS_TOKEN, on YAMANOE/YAMANOE."
-            exit 1
+          else
+            echo "present=true" >> "$GITHUB_OUTPUT"
+            echo "METRICS_TOKEN is present (${#TOKEN} characters)."
           fi
-          echo "METRICS_TOKEN is present (${#TOKEN} characters)."
 
       # Renders assets/metrics-languages.svg and commits it to this repo.
       # Requires METRICS_TOKEN: a classic PAT with NO scopes ticked. The action
       # cannot use GITHUB_TOKEN — that token is repository-scoped and cannot read
       # user-level data.
-      - uses: lowlighter/metrics@latest
+      - if: steps.preflight.outputs.present == 'true'
+        uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           committer_token: ${{ secrets.GITHUB_TOKEN }}
