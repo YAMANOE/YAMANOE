@@ -3,11 +3,11 @@
 ## Attribution
 
 Every commit, push and pull request in this repository is attributed to
-Yaman Obiedat and to nobody else.
+YAMANOE and to nobody else.
 
-- Author and committer: `Yaman Obiedat <yamanobiedat108@gmail.com>`
+- Author and committer: `YAMANOE <yamanobiedat108@gmail.com>`
 - Co-author trailer, when one is used:
-  `Co-Authored-By: Yaman Obiedat <yamanobiedat108@gmail.com>`
+  `Co-Authored-By: YAMANOE <yamanobiedat108@gmail.com>`
 
 Never add any of the following to a commit message, a pull request title or
 body, a code comment, or any other file pushed here:
