@@ -15,6 +15,22 @@ jobs:
     runs-on: ubuntu-latest
     name: generate-languages-metrics
     steps:
+      # Fail in 2s with an actionable message instead of 40s into a docker pull.
+      # Prints presence only — never the value.
+      - name: Verify METRICS_TOKEN reaches this workflow
+        env:
+          TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: |
+          if [ -z "$TOKEN" ]; then
+            echo "::error::METRICS_TOKEN is empty or not visible to this workflow."
+            echo "It must be a REPOSITORY secret under the ACTIONS tab:"
+            echo "  Settings > Secrets and variables > Actions > Repository secrets"
+            echo "Not the Dependabot tab, not Codespaces, not an Environment secret."
+            echo "Name must be exactly METRICS_TOKEN, on YAMANOE/YAMANOE."
+            exit 1
+          fi
+          echo "METRICS_TOKEN is present (${#TOKEN} characters)."
+
       # Renders assets/metrics-languages.svg and commits it to this repo.
       # Requires METRICS_TOKEN: a classic PAT with NO scopes ticked. The action
       # cannot use GITHUB_TOKEN — that token is repository-scoped and cannot read
