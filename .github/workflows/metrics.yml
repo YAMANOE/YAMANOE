@@ -1,0 +1,66 @@
+name: Metrics
+
+on:
+  schedule:
+    - cron: "0 3 * * *"
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  languages:
+    runs-on: ubuntu-latest
+    name: generate-languages-metrics
+    steps:
+      # Renders assets/metrics-languages.svg and commits it to this repo.
+      # Requires METRICS_TOKEN: a classic PAT with NO scopes ticked. The action
+      # cannot use GITHUB_TOKEN — that token is repository-scoped and cannot read
+      # user-level data.
+      - uses: lowlighter/metrics@latest
+        with:
+          token: ${{ secrets.METRICS_TOKEN }}
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          user: ${{ github.repository_owner }}
+          filename: assets/metrics-languages.svg
+          committer_message: "generated: language distribution"
+
+          # No header, no activity feed, no metadata footer — one card, one claim.
+          base: ""
+          config_timezone: Asia/Amman
+          config_padding: 6%, 10%
+
+          plugin_languages: yes
+          plugin_languages_sections: most-used
+          plugin_languages_details: percentage, bytes-size
+          plugin_languages_limit: 8
+          plugin_languages_threshold: 1%
+          plugin_languages_other: yes
+          plugin_languages_ignored: html, css, scss, makefile, dockerfile, shell
+
+          # Match assets/hero.svg — the classic template ships transparent-on-light.
+          extras_css: |
+            svg {
+              background: #06111C;
+              color: #9BB8D8;
+            }
+            h1, h2, h3 {
+              color: #5AA6FF;
+            }
+            .field {
+              color: #C9DDF5;
+            }
+            strong, b {
+              color: #F4F8FF;
+            }
+            a {
+              color: #5AA6FF;
+            }
+            footer {
+              color: #4E6B87;
+            }
+            .label {
+              background-color: #1F6FEB30;
+            }

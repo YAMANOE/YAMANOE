@@ -61,7 +61,7 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          token: ${{ secrets.METRICS_TOKEN }}   # a classic PAT, scope: read:user
+          token: ${{ secrets.METRICS_TOKEN }}   # classic PAT, NO scopes ticked
           filename: assets/metrics.svg
           base: header, activity, community, repositories, metadata
           config_timezone: Asia/Amman
@@ -75,6 +75,13 @@ jobs:
 ```
 
 > Needs a personal access token (`METRICS_TOKEN`), unlike the two Actions already here.
+> The action cannot use `GITHUB_TOKEN` — that one is repository-scoped and cannot read
+> user-level data. For the languages plugin the PAT needs **no scopes at all**
+> (its documented scope is `public_access`), so it grants nothing beyond public reads.
+>
+> **Adopted — see the Decision section below.** The shipped version is
+> [`.github/workflows/metrics.yml`](../.github/workflows/metrics.yml); the snippet above
+> is the generic form.
 
 ---
 
@@ -300,9 +307,26 @@ that, so the shortlist is short:
 duplicate or contradict something the README already does better, for the reasons noted
 under each.
 
-**Open question for you:** does the profile stay self-hosted-only (Part 1, plus the
-shields.io exception already in the contact row), or does it accept hotlinked cards?
-Everything else follows from that.
+---
+
+## Decision — 2026-08-23
+
+**Self-hosted only.** Part 2 is closed: no new hotlinked cards. The `img.shields.io`
+contact row stays as the one pre-existing exception; everything else must be an Action
+that commits its output into this repo.
+
+Adopted:
+
+- **`lowlighter/metrics`** → `.github/workflows/metrics.yml`, rendering
+  `assets/metrics-languages.svg` into the Engineering capability section. Configured for
+  one card only (`base: ""`, languages plugin), palette-matched via `extras_css`.
+
+Rejected under this decision: everything in Part 2, including `activity-graph`, which was
+the runner-up before the rule was set.
+
+Still available under the rule, if the profile ever wants more:
+`vn7n24fzkq/github-profile-summary-cards` (Part 1 §2) — no personal token needed, runs on
+`GITHUB_TOKEN` alone.
 
 ---
 

@@ -82,6 +82,12 @@
 </tr>
 </table>
 
+<p align="center">
+  <img alt="Language distribution across public repositories, by share of bytes" src="./assets/metrics-languages.svg" width="62%" />
+</p>
+
+<p><sub>Generated daily from public repositories. Byte share is a weak proxy for capability — it is here so the table above is checkable, not because volume is the point.</sub></p>
+
 ## ▍Activity
 
 <p><sub>Contribution rendering — supporting activity, not a measure of the systems above.</sub></p>
