@@ -1,107 +1,38 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 288" width="1000" height="288" role="img" aria-label="Yaman Obiedat — AI Systems, Geospatial Intelligence, Computer Vision. Evidence-grounded systems for real-world infrastructure.">
-  <title>Yaman Obiedat — AI Systems · Geospatial Intelligence · Computer Vision</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">Yaman Obiedat — AI engineer</title>
+  <desc id="desc">A custom YO monogram and mint orbital sculpture on charcoal. AI systems, geospatial intelligence and computer vision. Based in Amman, Jordan.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#06111C"/><stop offset="48%" stop-color="#0A1B2E"/><stop offset="100%" stop-color="#0B2842"/>
-    </linearGradient>
-    <linearGradient id="scrim" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#06111C" stop-opacity="0.97"/>
-      <stop offset="52%" stop-color="#071624" stop-opacity="0.86"/>
-      <stop offset="78%" stop-color="#0A1B2E" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#0A1B2E" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#0A66C2"/><stop offset="100%" stop-color="#5AA6FF"/>
-    </linearGradient>
-    <linearGradient id="rule" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#2F7FD6" stop-opacity="0.85"/><stop offset="100%" stop-color="#2F7FD6" stop-opacity="0"/>
-    </linearGradient>
-    <radialGradient id="halo" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#1F6FEB" stop-opacity="0.34"/>
-      <stop offset="65%" stop-color="#1F6FEB" stop-opacity="0.07"/>
-      <stop offset="100%" stop-color="#1F6FEB" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
-      <circle cx="1.4" cy="1.4" r="1.4" fill="#2F7FD6" fill-opacity="0.12"/>
-    </pattern>
-    <filter id="glow" x="-70%" y="-70%" width="240%" height="240%">
-      <feGaussianBlur stdDeviation="3.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="soft" x="-70%" y="-70%" width="240%" height="240%">
-      <feGaussianBlur stdDeviation="1.8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#e9ede5" stroke-opacity=".035"/></pattern>
+    <radialGradient id="light"><stop stop-color="#263f35"/><stop offset="1" stop-color="#121715"/></radialGradient>
   </defs>
-
-  <rect width="1000" height="288" rx="14" fill="url(#bg)"/>
-  <rect width="1000" height="288" rx="14" fill="url(#dots)"/>
-  <ellipse cx="770" cy="150" rx="300" ry="165" fill="url(#halo)"/>
-
-  <!-- distant layer: depth (placed where the scrim does not cover it) -->
-  <g opacity="0.45">
-    <g stroke="#1B4B7A" stroke-width="1" fill="none">
-      <path d="M636,44 L714,26 L800,52 L884,30 L958,50"/>
-      <path d="M628,258 L716,274 L806,250 L892,270 L966,246"/>
+  <style>
+    text{font-family:Arial,Helvetica,sans-serif}.orbit{transform-origin:950px 270px;animation:rotate 36s linear infinite}.signal{animation:signal 5s ease-in-out infinite}@keyframes rotate{to{transform:rotate(360deg)}}@keyframes signal{50%{opacity:.35}}@media(prefers-reduced-motion:reduce){.orbit,.signal{animation:none}}
+  </style>
+  <path fill="#121715" d="M0 0h1200v560H0z"/>
+  <circle cx="950" cy="270" r="270" fill="url(#light)"/>
+  <path fill="url(#grid)" d="M0 0h1200v560H0z"/>
+  <g transform="translate(54 45)" fill="none" stroke="#b3d7b9" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M0 0l12 15L24 0M12 15v18"/><rect x="34" y="0" width="25" height="33" rx="12.5"/></g>
+  <text x="132" y="66" fill="#b5bdb7" font-size="14" letter-spacing="3">YAMAN / AI ENGINEER</text>
+  <text x="1146" y="66" text-anchor="end" fill="#b5bdb7" font-size="13" letter-spacing="2">AMMAN, JO</text>
+  <path d="M54 106h1092" stroke="#303933"/>
+  <text x="54" y="211" fill="#b3d7b9" font-size="15" letter-spacing="3">INTELLIGENCE, BUILT WITH INTENT.</text>
+  <text x="49" y="301" fill="#f0f0e8" font-size="82" font-weight="700" letter-spacing="-4">Yaman</text>
+  <text x="49" y="384" fill="#f0f0e8" font-size="82" font-weight="700" letter-spacing="-4">Obiedat.</text>
+  <text x="54" y="433" fill="#b5bdb7" font-size="22">From real-world data to systems people can trust.</text>
+  <g fill="none" stroke="#b3d7b9" stroke-width="1.2">
+    <circle cx="950" cy="270" r="158" stroke-opacity=".55"/>
+    <g class="orbit">
+      <ellipse cx="950" cy="270" rx="158" ry="52" stroke-opacity=".75" transform="rotate(-35 950 270)"/>
+      <ellipse cx="950" cy="270" rx="158" ry="100" stroke-opacity=".35" transform="rotate(-35 950 270)"/>
+      <ellipse cx="950" cy="270" rx="52" ry="158" stroke-opacity=".75" transform="rotate(-35 950 270)"/>
+      <ellipse cx="950" cy="270" rx="100" ry="158" stroke-opacity=".35" transform="rotate(-35 950 270)"/>
+      <circle cx="1079" cy="179" r="5" fill="#b3d7b9"/>
     </g>
-    <g fill="#0A1B2E" stroke="#255F98" stroke-width="1.1">
-      <circle cx="714" cy="26" r="3"/><circle cx="800" cy="52" r="3"/><circle cx="884" cy="30" r="3"/>
-      <circle cx="716" cy="274" r="3"/><circle cx="806" cy="250" r="3"/><circle cx="892" cy="270" r="3"/>
-    </g>
+    <path d="M762 270h376M950 82v376" stroke-opacity=".18" stroke-dasharray="3 7"/>
+    <circle class="signal" cx="950" cy="270" r="8" fill="#b3d7b9" stroke="none"/>
   </g>
-
-  <!-- primary routing network -->
-  <g stroke="#22598C" stroke-width="1.7" stroke-linecap="round" fill="none">
-    <line x1="600" y1="150" x2="668" y2="80"/><line x1="600" y1="150" x2="668" y2="220"/>
-    <line x1="668" y1="80"  x2="736" y2="150"/><line x1="668" y1="220" x2="736" y2="150"/>
-    <line x1="736" y1="150" x2="806" y2="88"/><line x1="736" y1="150" x2="806" y2="212"/>
-    <line x1="806" y1="88"  x2="872" y2="150"/><line x1="806" y1="212" x2="872" y2="150"/>
-    <line x1="872" y1="150" x2="940" y2="100"/><line x1="872" y1="150" x2="940" y2="200"/>
-  </g>
-
-  <!-- solved routes sweeping the graph -->
-  <g fill="none" stroke-linecap="round" filter="url(#glow)">
-    <path d="M600,150 L668,80 L736,150 L806,88 L872,150 L940,100" stroke="#5AA6FF" stroke-width="2.6" stroke-dasharray="105 700" stroke-dashoffset="805">
-      <animate attributeName="stroke-dashoffset" from="805" to="-105" dur="4.4s" repeatCount="indefinite"/>
-    </path>
-    <path d="M600,150 L668,220 L736,150 L806,212 L872,150 L940,200" stroke="#1F6FEB" stroke-width="2.6" stroke-dasharray="105 700" stroke-dashoffset="805">
-      <animate attributeName="stroke-dashoffset" from="805" to="-105" dur="4.4s" begin="1.4s" repeatCount="indefinite"/>
-    </path>
-    <path d="M600,150 L668,80 L736,150 L806,212 L872,150 L940,100" stroke="#8FC4FF" stroke-width="1.9" stroke-dasharray="70 740" stroke-dashoffset="805" opacity="0.7">
-      <animate attributeName="stroke-dashoffset" from="805" to="-70" dur="5.8s" begin="2.9s" repeatCount="indefinite"/>
-    </path>
-  </g>
-
-  <!-- packets -->
-  <g filter="url(#soft)">
-    <circle r="3.5" fill="#A8CFFF">
-      <animateMotion dur="4.4s" repeatCount="indefinite" path="M600,150 L668,80 L736,150 L806,88 L872,150 L940,100"/>
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.07;.9;1" dur="4.4s" repeatCount="indefinite"/>
-    </circle>
-    <circle r="3.2" fill="#5AA6FF">
-      <animateMotion dur="4.4s" begin="1.4s" repeatCount="indefinite" path="M600,150 L668,220 L736,150 L806,212 L872,150 L940,200"/>
-      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.07;.9;1" dur="4.4s" begin="1.4s" repeatCount="indefinite"/>
-    </circle>
-  </g>
-
-  <!-- vertices -->
-  <g fill="#0A1B2E" stroke="#3B8AD9" stroke-width="1.8">
-    <circle cx="668" cy="80" r="5.4"/><circle cx="668" cy="220" r="5.4"/>
-    <circle cx="736" cy="150" r="6.4"/>
-    <circle cx="806" cy="88" r="5.4"/><circle cx="806" cy="212" r="5.4"/>
-    <circle cx="872" cy="150" r="6.4"/>
-    <circle cx="940" cy="100" r="5.4"/><circle cx="940" cy="200" r="5.4"/>
-  </g>
-  <circle cx="600" cy="150" r="7.4" fill="#0A66C2" stroke="#8FC4FF" stroke-width="2"/>
-  <circle cx="600" cy="150" r="7.4" fill="none" stroke="#5AA6FF" stroke-width="1.5">
-    <animate attributeName="r" values="7.4;21;7.4" dur="3.6s" repeatCount="indefinite"/>
-    <animate attributeName="opacity" values=".85;0;.85" dur="3.6s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- left scrim keeps type legible over the scene -->
-  <rect width="1000" height="288" rx="14" fill="url(#scrim)"/>
-
-  <rect x="60" y="72" width="44" height="3" rx="1.5" fill="url(#accent)"/>
-  <text x="60" y="132" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="54" font-weight="700" fill="#F4F8FF">Yaman Obiedat</text>
-  <text x="60" y="171" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="21" font-weight="600" fill="#6FB0FF">AI Systems · Geospatial Intelligence · Computer Vision</text>
-  <rect x="60" y="191" width="430" height="1" fill="url(#rule)"/>
-  <text x="60" y="222" font-family="Segoe UI, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="17" fill="#9BB8D8">Evidence-grounded systems for real-world infrastructure.</text>
+  <text x="950" y="466" text-anchor="middle" fill="#b5bdb7" font-size="11" letter-spacing="3">DATA → REASONING → IMPACT</text>
+  <path d="M54 495h1092" stroke="#303933"/>
+  <text x="54" y="532" fill="#b5bdb7" font-size="14" letter-spacing="1">AI SYSTEMS / GEOSPATIAL / COMPUTER VISION</text>
+  <text x="1146" y="532" text-anchor="end" fill="#b3d7b9" font-size="14">AR / EN</text>
 </svg>
