@@ -1,78 +1,130 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YAMANOE/YAMANOE/03bbfb3c8a2bfa7aeb05f10eaf52effe467ec1cd/assets/hero.svg" width="100%" alt="Yaman Obiedat — AI engineer in Amman, Jordan. AI systems, geospatial intelligence and computer vision." />
+  <img alt="Yaman Obiedat — AI Systems · Geospatial Intelligence · Computer Vision. Evidence-grounded systems for real-world infrastructure." src="./assets/hero.svg" width="100%" />
+</p>
+
+<table>
+<tr>
+<td width="56%" valign="top">
+<p>I build AI systems for the public sector in Jordan — the kind that have to survive a real audit, not just a demo.</p>
+<p>My work sits where <b>LLM agents meet hard, verifiable data</b>: routable road networks, Arabic NLP, and computer vision. The engineering problem I care about most is <b>refusal</b> — designing systems that decline to answer when the evidence isn't there, instead of inventing a number.</p>
+<p>Everything I ship is bilingual and RTL-first, because the people using it read Arabic.</p>
+</td>
+<td width="44%" valign="top">
+<p><b>B.Sc. Data Science &amp; Artificial Intelligence</b><br/><sub>Yarmouk University</sub></p>
+<p><b>AI Developer — 9xAI Program</b><br/><sub>Al-Hussein Technical University (HTU)</sub></p>
+<p><b>Amman, Jordan</b><br/><sub>Arabic · English · RTL-first engineering</sub></p>
+</td>
+</tr>
+</table>
+
+## ▍Flagship — Traffic Intelligence Platform
+
+<table>
+<tr>
+<td width="25%" valign="top"><sub><b>PROBLEM</b></sub><br/>Planners need to know what a road closure does to the network <i>before</i> it happens.</td>
+<td width="25%" valign="top"><sub><b>APPROACH</b></sub><br/>A hierarchical multi-agent system answering in Arabic or English over a routable OpenStreetMap graph.</td>
+<td width="25%" valign="top"><sub><b>SCALE</b></sub><br/><b>135k</b> routable car edges<br/><b>99k</b> graph vertices</td>
+<td width="25%" valign="top"><sub><b>GUARANTEE</b></sub><br/>A critic gates every response. No claim ships without evidence behind it.</td>
+</tr>
+</table>
+
+<p align="center">
+  <img alt="Request pipeline: a planning question in Arabic or English reaches a planner, which dispatches routing, corridor and name-resolution agents against verified data sources — PostGIS and pgRouting at 135k edges and 99k vertices, a corridor registry, and an Arabic street-name index. Results form an evidence set that a critic gates: backed claims return an answer with its evidence, unsupported claims return a refusal naming what is missing." src="./assets/architecture.svg" width="100%" />
+</p>
+
+> *“What happens if University Street closes?”* — the system resolves the street name in Arabic, re-routes across the corridor registry, and either answers **with the evidence attached**, or refuses and **names the evidence it does not have**. It never fills the gap with a plausible number.
+
+<p><sub><code>TypeScript</code> · <code>NestJS</code> · <code>PostgreSQL</code> · <code>PostGIS</code> · <code>pgRouting</code> · <code>Ollama</code></sub></p>
+
+## ▍Selected systems
+
+<table>
+<tr>
+<td width="33%" valign="top"><b>🗣️ VOC-360 · صوت المواطن</b><br/><sub><b>ARABIC NLP · CIVIC PLATFORM</b></sub></td>
+<td width="33%" valign="top"><b>🛸 Aerial Traffic Analysis</b><br/><sub><b>COMPUTER VISION · TRANSPORT</b></sub></td>
+<td width="33%" valign="top"><b>🌱 AgriBot AI</b><br/><sub><b>EDGE ML · GRADUATION PROJECT</b></sub></td>
+</tr>
+<tr>
+<td valign="top">Complaint intake and analysis for Jordanian ministries.</td>
+<td valign="top">Raw drone footage turned into usable transport data.</td>
+<td valign="top">Crop and fertilizer recommendation from IoT sensor data.</td>
+</tr>
+<tr>
+<td valign="top"><sub>Clustering and causal analysis sit behind cross-ministry role-based access — and the findings leave the system as Arabic PDF reports officials can circulate and file.</sub></td>
+<td valign="top"><sub>Detection, multi-object tracking and zone occupancy produce origin–destination flows and speeds calibrated against ground truth, not raw pixel counts.</sub></td>
+<td valign="top"><sub>Runs on-device on a Raspberry Pi. XGBoost 99% and Random Forest 94% on the project's sensor dataset — graduation evaluation figures, not a production deployment.</sub></td>
+</tr>
+<tr>
+<td valign="top"><sub><code>React</code> <code>FastAPI</code> <code>PostgreSQL</code> <code>Docker</code></sub></td>
+<td valign="top"><sub><code>Python</code> <code>YOLO</code> <code>Supervision</code> <code>OpenCV</code></sub></td>
+<td valign="top"><sub><code>Python</code> <code>XGBoost</code> <code>scikit-learn</code></sub></td>
+</tr>
+</table>
+
+## ▍Engineering capability
+
+<table>
+<tr>
+<td width="20%" valign="top"><b>SYSTEMS &amp; DATA</b></td>
+<td valign="top"><code>TypeScript</code> <code>NestJS</code> <code>FastAPI</code> <code>PostgreSQL</code> <code>Docker</code> <code>Raspberry Pi</code><br/><sub>Service architecture, relational modelling, containerised and on-device deployment.</sub></td>
+</tr>
+<tr>
+<td valign="top"><b>GEOSPATIAL</b></td>
+<td valign="top"><code>PostGIS</code> <code>pgRouting</code> <code>OpenStreetMap</code><br/><sub>Routable graph construction and shortest-path analysis over a 135k-edge road network.</sub></td>
+</tr>
+<tr>
+<td valign="top"><b>AI &amp; VISION</b></td>
+<td valign="top"><code>Ollama</code> <code>Arabic NLP</code> <code>YOLO</code> <code>Supervision</code> <code>OpenCV</code> <code>XGBoost</code> <code>scikit-learn</code><br/><sub>Multi-agent orchestration, evidence gating, detection and multi-object tracking.</sub></td>
+</tr>
+<tr>
+<td valign="top"><b>INTERFACE</b></td>
+<td valign="top"><code>React</code> <code>RTL / bilingual UI</code> <code>Arabic PDF reporting</code><br/><sub>Right-to-left layout as a first-class constraint, not a translation pass.</sub></td>
+</tr>
+</table>
+
+## ▍Open source
+
+<p><sub>Public repositories, linked to the code. The systems above are not open — these are the ones you can read.</sub></p>
+
+<table>
+<tr>
+<td width="33%" valign="top"><b><a href="https://github.com/YAMANOE/rag-tech">⚖️ RegTech Platform</a></b><br/><sub><b>المنصة الذكية للتشريعات الأردنية</b></sub></td>
+<td width="33%" valign="top"><b><a href="https://github.com/YAMANOE/recom_sys">🎬 NextGen Recommender</a></b><br/><sub><b>SEMANTIC RETRIEVAL · FULL STACK</b></sub></td>
+<td width="33%" valign="top"><b><a href="https://github.com/YAMANOE/nlp_pro1">🧪 Toxic Text Classification</a></b><br/><sub><b>LSTM vs DistilBERT + LoRA</b></sub></td>
+</tr>
+<tr>
+<td valign="top">Legislative intelligence over Jordanian law.</td>
+<td valign="top">A recommender that explains its own answers.</td>
+<td valign="top">Two architectures on one task, measured.</td>
+</tr>
+<tr>
+<td valign="top"><sub>Every output carries a provenance state — <b>Verified</b>, <b>Inferred</b>, <b>Generated</b> or <b>Unavailable</b>. Version diffs return an honest empty state instead of a guess, and the copilot is deliberately a secondary layer, never the source of truth.</sub></td>
+<td valign="top"><sub>Hybrid retrieval over catalog embeddings, metadata overlap and feedback memory, driven by seeds, avoid-lists and filters. Every result ships with the reason it was chosen, not just a score.</sub></td>
+<td valign="top"><sub>A bidirectional LSTM reaches <b>88%</b> accuracy and <b>0.89</b> weighted F1 on multi-class toxicity, with a LoRA-tuned DistilBERT measured against it. Per-class scores are published and the weakest class is named rather than hidden.</sub></td>
+</tr>
+<tr>
+<td valign="top"><sub><code>Next.js 14</code> <code>FastAPI</code> <code>PostgreSQL</code> <code>NebulaGraph</code></sub></td>
+<td valign="top"><sub><code>Next.js</code> <code>FastAPI</code> <code>Embeddings</code></sub></td>
+<td valign="top"><sub><code>Keras</code> <code>DistilBERT</code> <code>LoRA</code></sub></td>
+</tr>
+</table>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/YAMANOE/YAMANOE/output/github-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/YAMANOE/YAMANOE/output/github-snake.svg" />
+    <img alt="snake eating my contributions" src="https://raw.githubusercontent.com/YAMANOE/YAMANOE/output/github-snake.svg" width="100%" />
+  </picture>
+</p>
+
+## ▍Contact
+
+<p align="center">
+  <a href="mailto:yamanobiedat5@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/yaman-obiedat"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+  <a href="https://github.com/YAMANOE"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 </p>
 
 <p align="center">
-  <a href="mailto:yamanobiedat5@gmail.com">Email</a> &nbsp; / &nbsp;
-  <a href="https://www.linkedin.com/in/yaman-obiedat">LinkedIn</a> &nbsp; / &nbsp;
-  <a href="#open-source">Explore my code ↓</a>
-</p>
-
-## A little about me
-
-I build **AI systems for the public sector in Jordan**, combining LLM agents with geospatial data, Arabic NLP, and computer vision. My focus is practical: useful answers, traceable evidence, and interfaces that work naturally in Arabic and English.
-
-Data Science & Artificial Intelligence at **Yarmouk University** · AI Developer, **9xAI Program at HTU**.
-
-## Selected work
-
-### 01 / Traffic Intelligence Platform
-
-**Understand a road closure before it happens.**
-
-A bilingual multi-agent system that reasons over a routable OpenStreetMap network. Routing, corridor analysis, and Arabic street-name resolution feed an evidence check before the system answers.
-
-**135k road edges · 99k vertices** · Answers backed by evidence, with explicit refusals when data is missing.
-
-`TypeScript` `NestJS` `PostGIS` `pgRouting` `Ollama`
-
----
-
-### 02 / VOC-360 — صوت المواطن
-
-Complaint intake and Arabic NLP for Jordanian ministries. Clustering and causal analysis help teams investigate issues; role-based access and Arabic PDF reports support their daily work.
-
-`React` `FastAPI` `PostgreSQL` `Docker`
-
-### 03 / Aerial Traffic Analysis
-
-Turning drone footage into transport data: vehicle detection, multi-object tracking, zone occupancy, and origin–destination flows, with speeds calibrated against ground truth.
-
-`Python` `YOLO` `Supervision` `OpenCV`
-
-### 04 / AgriBot AI
-
-Crop and fertilizer recommendations from IoT sensor data, running on a Raspberry Pi. My graduation project in applied machine learning and on-device deployment.
-
-`Python` `XGBoost` `scikit-learn` `Raspberry Pi`
-
-## Open source
-
-The projects below have public code. The selected systems above are private.
-
-| Project | What you’ll find |
-| :--- | :--- |
-| [**RegTech Platform ↗**](https://github.com/YAMANOE/rag-tech) | Jordanian legislative intelligence with explicit provenance states and version comparison. |
-| [**NextGen Recommender ↗**](https://github.com/YAMANOE/recom_sys) | Hybrid retrieval using embeddings, metadata, and feedback, with a reason for every recommendation. |
-| [**Toxic Text Classification ↗**](https://github.com/YAMANOE/nlp_pro1) | A comparison of bidirectional LSTM and LoRA-tuned DistilBERT, including per-class evaluation. |
-
-<details>
-<summary><b>More about my engineering toolkit</b></summary>
-
-**Systems & data** — TypeScript, NestJS, FastAPI, PostgreSQL, Docker.
-
-**Geospatial** — PostGIS, pgRouting, OpenStreetMap, routable graphs.
-
-**AI & vision** — LLM orchestration, Ollama, Arabic NLP, YOLO, OpenCV, XGBoost.
-
-**Interfaces** — React, bilingual and RTL layouts, Arabic PDF reporting.
-
-</details>
-
-## Let’s connect
-
-Interested in AI that works with real-world data? Reach me at **[yamanobiedat5@gmail.com](mailto:yamanobiedat5@gmail.com)** or connect on **[LinkedIn](https://www.linkedin.com/in/yaman-obiedat)**.
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/YAMANOE/YAMANOE/30b9581428c469e5218739b2a5edc7a1ce0e6d2c/assets/footer.svg" width="100%" alt="Yaman Obiedat — Thoughtful systems. Real-world impact." />
+  <img alt="" src="./assets/footer.svg" width="100%" />
 </p>
