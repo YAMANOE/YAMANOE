@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/hero.svg?v=03bbfb3" width="100%" alt="Yaman Obiedat — AI engineer in Amman, Jordan. AI systems, geospatial intelligence and computer vision." />
+  <img src="https://raw.githubusercontent.com/YAMANOE/YAMANOE/03bbfb3c8a2bfa7aeb05f10eaf52effe467ec1cd/assets/hero.svg" width="100%" alt="Yaman Obiedat — AI engineer in Amman, Jordan. AI systems, geospatial intelligence and computer vision." />
 </p>
 
 <p align="center">
@@ -74,5 +74,5 @@ The projects below have public code. The selected systems above are private.
 Interested in AI that works with real-world data? Reach me at **[yamanobiedat5@gmail.com](mailto:yamanobiedat5@gmail.com)** or connect on **[LinkedIn](https://www.linkedin.com/in/yaman-obiedat)**.
 
 <p align="center">
-  <img src="./assets/footer.svg?v=30b9581" width="100%" alt="Yaman Obiedat — Thoughtful systems. Real-world impact." />
+  <img src="https://raw.githubusercontent.com/YAMANOE/YAMANOE/30b9581428c469e5218739b2a5edc7a1ce0e6d2c/assets/footer.svg" width="100%" alt="Yaman Obiedat — Thoughtful systems. Real-world impact." />
 </p>
