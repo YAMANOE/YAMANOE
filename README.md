@@ -13,7 +13,7 @@
 
 <img src="https://raw.githubusercontent.com/YAMANOE/YAMANOE/a9f6692335f61362cf38b3a0607c5624a5b7f84a/assets/editorial/about.svg" width="100%" alt="I build bilingual AI systems for the public sector in Jordan, connecting Arabic NLP, computer vision, and geospatial data with traceable evidence. B.Sc. Data Science and Artificial Intelligence, Yarmouk University. AI Developer, HTU 9xAI Program.">
 
-<a id="selected-projects"></a>
+## Selected projects
 
 <a href="https://github.com/YAMANOE/rag-tech"><img src="https://raw.githubusercontent.com/YAMANOE/YAMANOE/a9f6692335f61362cf38b3a0607c5624a5b7f84a/assets/editorial/regtech.svg" width="100%" alt="RegTech Platform: Jordanian legislation search by title, identifier, and article text; legal timelines, related laws, and article-version comparison when source data exists. Next.js, FastAPI, PostgreSQL, NebulaGraph. Open repository."></a>
 
@@ -26,7 +26,7 @@
   <a href="https://github.com/YAMANOE/nlp_pro1">Toxic Text Classification ↗</a>
 </p>
 
-<a id="technologies"></a>
+## Technologies
 
 <img src="https://raw.githubusercontent.com/YAMANOE/YAMANOE/a9f6692335f61362cf38b3a0607c5624a5b7f84a/assets/editorial/toolkit.svg" width="100%" alt="AI: Ollama, Hugging Face, PyTorch, TensorFlow, OpenCV, scikit-learn. Backend: Supabase, PostgreSQL, FastAPI, NestJS, Docker. Languages and interfaces: Python, TypeScript, React, Next.js. Geospatial: OpenStreetMap, PostGIS, pgRouting.">
 
@@ -47,7 +47,7 @@ Python, TypeScript, React, Next.js, FastAPI, NestJS, Docker, PostgreSQL, Supabas
 
 </details>
 
-<a id="connect"></a>
+## Connect
 
 <img src="https://raw.githubusercontent.com/YAMANOE/YAMANOE/a9f6692335f61362cf38b3a0607c5624a5b7f84a/assets/editorial/contact.svg" width="100%" alt="Let's connect. Yaman Obiedat, Amman, Jordan. yamanobiedat5@gmail.com">
 
