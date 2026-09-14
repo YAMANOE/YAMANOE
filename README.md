@@ -1,4 +1,9 @@
 <picture>
+  <source media="(prefers-reduced-motion: reduce)" srcset="assets/network-3d-static.png">
+  <img src="assets/network-3d.gif" width="100%" alt="Y/O — rotating 3D network connecting models, data, and interfaces">
+</picture>
+
+<picture>
   <source media="(prefers-reduced-motion: reduce)" srcset="assets/profile-static.svg">
   <img src="assets/profile.svg" width="100%" alt="Yaman Obiedat. AI systems engineer, Amman, Jordan. Evidence-aware AI, geospatial analysis, computer vision, and bilingual interfaces. Stack includes Ollama, Supabase, Python, TypeScript, React, Next.js, FastAPI, NestJS, PostgreSQL, Docker, PyTorch, TensorFlow, Hugging Face, OpenCV, scikit-learn, OpenStreetMap. Featured contributions: VOC-360, Pulga Crisis Intelligence, Moodle People and Enrolment. Also includes TashreeatCom and eight further projects. Architecture illustrates RegTech. Project thumbnails are conceptual diagrams.">
 </picture>
